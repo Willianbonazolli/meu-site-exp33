@@ -450,9 +450,9 @@ table, th, td{
   color: #fff;
 }
 
-.header{
+header{
  filter: brightness(1);
- }
+}
 
 
 
@@ -465,5 +465,6 @@ table, th, td{
 
 
   
+
 
 

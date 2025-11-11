@@ -70,19 +70,19 @@ body::before{
 }
 
 .maelle{
-    border-color: whitesmoke;
-    filter: brightness(1);
+  border-color: whitesmoke;
+  filter: brightness(1);
 }
 
 .gustave{
-    border-color: whitesmoke;
-    filter: brightness(1);
+  border-color: whitesmoke;
+  filter: brightness(1);
 }
 
 .voltar {
-    display: flex;
-    position: relative;
-    justify-content: center;
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
 
 .texto-bg {
@@ -117,10 +117,10 @@ body::before{
 }
 
 .fundo{
-    display: flex; 
-    position: relative;
-    justify-content: center; 
-    align-items: center;
+  display: flex; 
+  position: relative;
+  justify-content: center; 
+  align-items: center;
 }
 
 .fundo-h2{
@@ -270,12 +270,12 @@ p{
 }
 
 .fundo-img{
-    display: flex; 
-    position: relative;
-    width: 90%;
-    top: -160px;
-    left: -10%;
-    filter: brightness(0.4);
+  display: flex; 
+  position: relative;
+  width: 90%;
+  top: -160px;
+  left: -10%;
+  filter: brightness(0.4);
 }
 
 .linha {
@@ -450,6 +450,9 @@ table, th, td{
   color: #fff;
 }
 
+.header{
+ filter(brig)
+
 
 
 
@@ -461,3 +464,4 @@ table, th, td{
 
 
   
+

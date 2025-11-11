@@ -298,7 +298,7 @@ p{
 }
 
 .listatr{
-  color: rgb(207, 186, 186);
+  color: rgb(255, 255, 255);
   text-align: left;
   font-size: 16pt;
 }
@@ -411,6 +411,43 @@ table, th, td{
 .posturas-table th {
   background: rgba(236, 207, 163, 0.15);
   font-weight: 700;
+}
+
+.pat{
+  font-family: var(--font-display);
+  font-size: 20pt;
+  text-align: left;
+}
+
+.ati{
+  width: 700px;
+}
+
+.main-menu {
+  background: #0c0c0c;
+  padding: 1rem 2rem;
+  font-family: "Quintessential", serif;
+}
+
+.main-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-menu a {
+  color: #eccfa3;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.main-menu a:hover {
+  color: #fff;
 }
 
 

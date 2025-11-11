@@ -451,7 +451,8 @@ table, th, td{
 }
 
 .header{
- filter(brig)
+ filter: brightness(1);
+ }
 
 
 
@@ -464,4 +465,5 @@ table, th, td{
 
 
   
+
 

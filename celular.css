@@ -1,1 +1,95 @@
+html{
+    box-sizing: border-box;
+    font-size:16px;
+}
+
+*, *::before, *::after {
+     box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Quintessential", serif;
+    background: #0c0c0c;
+    color: #eccfa3;
+    line-height: 1.5;
+}
+
+.main-menu ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-menu a {
+    color: #eccfa3;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+}
+
+p{
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #eccfa3;
+    color: #000;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 10pt;
+    color: #eccfa3;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+    .main-menu ul {
+        flex-direction: column;
+        max-height:0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    #menu-toggle:checked ~ .main-menu ul{
+        max-height: 300px;
+    }
+}
 

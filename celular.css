@@ -45,13 +45,17 @@ h2 {
     font-size: clamp(1.4rem, 4vw, 2.2rem);
 }
 
+h3 {
+    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+}
+
 p{
     font-size: clamp(0.9rem, 2.5vw, 1.1rem);
 }
 
 .container{
     width: 90%;
-    max-width: 1200px;
+    max-width: 100%
     margin: 0 auto;
     padding: 1rem;
 }

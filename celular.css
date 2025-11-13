@@ -73,7 +73,7 @@ p{
 
 .hamburger{
     display: none;
-    font-size: 10pt;
+    font-size: 2rem;
     color: #eccfa3;
     cursor: pointer;
 }

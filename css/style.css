@@ -99,7 +99,6 @@ body::before{
 .frame-principal {
   position: absolute;
   top: 0;
-  left: -100px;
   width: 110%;
   height: 100%;
   object-fit: cover;
@@ -109,7 +108,6 @@ body::before{
 .frame-principal-2{
   position: absolute;
   top: 0;
-  left: -100px;
   width: 110%;
   height: 100%;
   object-fit: cover;
@@ -465,6 +463,7 @@ header{
 
 
   
+
 
 
 

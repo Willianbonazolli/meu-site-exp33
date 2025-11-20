@@ -15,20 +15,62 @@ body {
     line-height: 1.5;
 }
 
-.main-menu ul{
-    list-style: none;
-    display: flex;
-    gap: 1rem;
-    padding: 0;
-    margin: 0;
-    justify-content: center;
-    flex-wrap: wrap;
+.main-menu{
+    height: 5vh;
+    background-color: #000000;
 }
 
+.main-menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+
+
 .main-menu a {
+    position: relative;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
     color: #eccfa3;
     text-decoration: none;
-    font-size: 1rem;
+    font-family: var(--font-display);
+    font-size: var(--font-size-sm);
+    background: linear-gradiente(135deg, #eccfa3 0%, #d4a574 100%);
+    background-size: 200% 200%;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.main-menu a::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, trasnparente, rgba(255, 255, 255, 0.4),
+    transparent);
+    transition: left 0.6s ease;
+}
+
+.main-menu a:hover::before {
+    left: 100%;
+}
+
+.main-menu a:hover {
+    transition: 0.3s ease;
+    color: aliceblue;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(236, 207, 163, 0.3);
+    border-color: var(--cor-texto);
 }
 
 img {
@@ -55,7 +97,7 @@ p{
 
 .container{
     width: 90%;
-    max-width: 100%
+    max-width: 100%;
     margin: 0 auto;
     padding: 1rem;
 }

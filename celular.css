@@ -284,6 +284,69 @@
     .premio::after {
         display: none !important;
     }
+
+    .alice-row {
+        flex-direction: column;
+        text-align: center;
+        margin: 2rem 0;
+        gap: 1.5rem;
+    }
+    
+    .alice-row img.pulsar.alice {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .textm {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 15px;
+        text-align: justify;
+    }
+    
+    .title-per {
+        position: relative;
+        font-size: 3rem;
+        font-family: 'IM Fell Double Pica', serif;
+        margin: 1.5rem 0;
+        text-align: center;
+    }
+    
+    .atributos-text {
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 1.5rem 0;
+    }
+    
+    .center-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 1.5rem auto;
+    }
+    
+    .pat {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 15px;
+        text-align: justify;
+    }
+    
+    ul {
+        padding-left: 2rem;
+        margin: 1.5rem 0;
+    }
+    
+    .listatr {
+        font-size: 0.95rem;
+        margin: 0.5rem 0;
+    }
+    
+    .pulsar[alt="maeje"] {
+        width: 150px;
+        margin: 2rem auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -346,6 +409,43 @@
     .premios-cabecalho h2 {
         font-size: 1.2;
 
+    }
+
+     .title-per {
+        font-family: 'IM Fell Double Pica', serif;;
+        font-size: 3rem;
+        margin: 1rem 0;
+    }
+    
+    .atributos-text {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .alice-row img.pulsar.alice {
+        max-width: 250px;
+    }
+    
+    .textm {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    
+    .pat {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+    
+    ul {
+        padding-left: 1.5rem;
+    }
+    
+    .listatr {
+        font-size: 0.85rem;
+    }
+    
+    .pulsar[alt="maeje"] {
+        width: 120px;
     }
     
 }

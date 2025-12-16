@@ -230,19 +230,11 @@
     }
     
     .album-capa {
-        flex: 0 0 auto;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
     }
 
-    .album-capa,
-    .spotify-player-wrapper {
-        max-width: 100%;
-        margin: 0 auto 1rem auto;
-    }
-}
-    
     .capa-img {
         width: 100%;
         max-width: 300px;
@@ -329,19 +321,31 @@
         height: 150px;
     }
     
+    .album-capa {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+
+    .capa-img {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .spotify-player-wrapper {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
     .spotify-player-wrapper iframe {
         height: 250px;
     }
     
     .premios-cabecalho h2 {
-        font-size: 1.2rem !important;
+        font-size: 1.2;
+
     }
     
-    .premios-destaque {
-        font-size: 1.5rem !important;
-    }
-    
-    .premio {
-        font-size: 0.8rem !important;
-    }
 }

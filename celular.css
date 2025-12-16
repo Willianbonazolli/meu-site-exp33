@@ -222,6 +222,8 @@
     
     .soundtrack-conteudo {
         display: flex;
+        flex-direction: column;
+        text-align: center;
         align-items: center;
         gap: 2rem;
         margin-top: 1rem;
@@ -233,6 +235,13 @@
         max-width: 300px;
         margin: 0 auto;
     }
+
+    .album-capa,
+    .spotify-player-wrapper {
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+    }
+}
     
     .capa-img {
         width: 100%;

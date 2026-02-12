@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Conheça Esquie, o ser mítico de Expedition 33. Descubra sua biografia, personalidade, habilidades e galeria de arte."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esquie - Personagem de Expedition 33</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">EXPEDITION 33</a>
+
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">História</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li>
+              <a href="https://www.expedition33.com" class="nav-cta">Out Now</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main char-detail-page">
+      <section class="char-header reveal">
+        <div class="char-header-image-container">
+          <img
+            src="imagens/esquie.jpg"
+            alt="Arte principal de Esquie"
+            class="char-header-image"
+          />
+        </div>
+        <div class="char-header-text">
+          <h1 class="char-name">Esquie</h1>
+          <p class="char-subtitle">O Ser Mítico</p>
+        </div>
+      </section>
+
+      <section class="quote-block reveal">
+        <blockquote>
+          "Lendas dizem que ele é o ser mais poderoso do mundo. Lendas também
+          dizem... que ele é preguiçoso."
+        </blockquote>
+      </section>
+
+      <div class="char-content-grid">
+        <section class="char-section reveal">
+          <h2>Biografia</h2>
+          <p>
+            As crianças em Lumière adoram ouvir histórias sobre o mítico Esquie
+            e suas aventuras fantásticas. Nascido na aurora dos tempos, Esquie,
+            junto com Monoco, os Gestrals e os Grandis, foi criado por Verso
+            Dessendre para brincar em sua Tela de infância, modelado a partir de
+            seu brinquedo de pelúcia favorito.
+            <br /><br />
+            Esquie já foi conhecido como o ser mais poderoso do mundo, mas desde
+            a Fratura, o povo de Lumière gradualmente passou a considerá-lo
+            lendário. Verso Pintado e Monoco mantiveram contato próximo com ele
+            ao longo dos anos.
+            <br /><br />
+            Por volta do Ano do Monólito 39, Esquie testemunhou a tentativa de
+            suicídio de Sciel por afogamento após a morte de seu marido Pierre.
+            Ele a salvou e a colocou nas docas de Lumière, um fato que ela
+            desconhecia até muito mais tarde.
+          </p>
+        </section>
+
+        <section class="char-section reveal">
+          <h2>Habilidades e Gameplay</h2>
+          <p>
+            Esquie possui quatro pedras de estimação, cada uma concedendo
+            habilidades únicas para a Expedição:
+          </p>
+          <ul>
+            <li>
+              <strong class="stone-name florrie">Florrie:</strong> Permite que
+              Esquie nade enquanto carrega a Expedição. Encontrada no final do
+              Ato I.
+            </li>
+            <li>
+              <strong class="stone-name soarrie">Soarrie:</strong> Permite que
+              Esquie voe enquanto carrega a Expedição. Foi sua primeira pedra.
+              Encontrada no final do Ato II.
+            </li>
+            <li>
+              <strong class="stone-name dorrie">Dorrie:</strong> Permite que
+              Esquie quebre corais enquanto nada. Encontrada na Velha Lumière
+              durante o Ato II.
+            </li>
+            <li>
+              <strong class="stone-name urrie">Urrie:</strong> Permite que
+              Esquie mergulhe debaixo d'água. Obtida ao atingir o Nível de
+              Relacionamento 6 com o grupo e após derrotar o François.
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="back-button-container">
+        <a href="personagens.html" class="back-button"
+          >« Voltar para Personagens</a
+        >
+      </div>
+    </main>
+
+    <canvas id="particles-bg"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/animacoes.js" defer></script>
+    <script src="js/entry.js" defer></script>
+    <script src="js/petals.js" defer></script>
+  </body>
+</html>

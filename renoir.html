@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Conheça Renoir, o duelista carismático de Expedition 33. Descubra sua biografia, personalidade, habilidades e galeria de arte."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Renoir - Personagem de Expedition 33</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">EXPEDITION 33</a>
+
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">História</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li>
+              <a href="https://www.expedition33.com" class="nav-cta">Out Now</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main char-detail-page">
+      <section class="char-header reveal">
+        <div class="char-header-image-container">
+          <img
+            src="imagens/hq720.jpg"
+            alt="Arte principal de Renoir"
+            class="char-header-image"
+          />
+        </div>
+        <div class="char-header-text">
+          <h1 class="char-name">Renoir</h1>
+          <p class="char-subtitle">O Comandante Implacável</p>
+        </div>
+      </section>
+
+      <section class="quote-block reveal">
+        <blockquote>
+          "A vitória exige sacrifício. E estou totalmente preparado para pagar o
+          preço."
+        </blockquote>
+      </section>
+
+      <div class="char-content-grid">
+        <section class="char-section reveal">
+          <h2>Biografia</h2>
+          <p>
+            Renoir é um antagonista principal em Clair Obscur: Expedition 33. Um
+            espelho de Renoir Dessendre pintado pela Pintora no mundo da Tela,
+            ele é o pai de Alicia, Clea e de seu filho distante, Verso.
+            <br /><br />
+            Antigo comandante da Expedição Zero, Renoir é um homem carismático,
+            porém implacável, que dedicou sua vida a manter sua família unida,
+            enquanto garantia que nenhum Expedicionário jamais alcançasse a
+            Pintora, a fonte da vida dentro da Tela.
+          </p>
+        </section>
+
+        <section class="char-section reveal">
+          <h2>Motivações</h2>
+          <p>
+            Carregando todo o peso dos fracassos da família Dessendre em seus
+            ombros, ele é um pai protetor, bem ciente da realidade de sua
+            condição. Suas intenções equivocadas acabaram por colocá-lo em
+            conflito com seu filho, Verso, que se tornou determinado a derrubar
+            a Pintora e, com ela, a Tela como um todo.
+          </p>
+          <p>
+            Sua determinação esconde uma dor profunda, desespero e medo da
+            perda. Renoir é implacavelmente motivado e focado em sua busca para
+            salvar sua família.
+          </p>
+        </section>
+      </div>
+
+      <div class="back-button-container">
+        <a href="personagens.html" class="back-button"
+          >« Voltar para Personagens</a
+        >
+      </div>
+    </main>
+
+    <canvas id="particles-bg"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/animacoes.js" defer></script>
+    <script src="js/entry.js" defer></script>
+    <script src="js/petals.js" defer></script>
+  </body>
+</html>

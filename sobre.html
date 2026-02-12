@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Expedition 33 - Uma jornada desesperada para destruir a Pintora. 67 anos após a fratura, um grupo de expedicionários enfrenta o destino nas Costas Escuras."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Expedition 33 - A Disaster Expedition" />
+    <meta
+      property="og:description"
+      content="Expedition 33 - Uma jornada desesperada para destruir a Pintora."
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Expedition 33 - Clair Obscur</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica:ital@0;1&family=Lavishly+Yours&family=Quintessential&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">EXPEDITION 33</a>
+
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">História</a></li>
+            <li><a href="sobre.html" class="active">Sobre</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li>
+              <a
+                href="https://www.expedition33.com"
+                class="nav-cta"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Out Now</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="banner-sobre-section reveal" id="historia">
+        <img
+          src="imagens/Coe33_Lumi.webp"
+          alt="Background Hero"
+          class="banner-bg-img"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.3);
+            z-index: 1;
+          "
+          loading="lazy"
+          width="1920"
+          height="1080"
+          decoding="async"
+        />
+        <div class="banner-content">
+          <h1 class="banner-title">CLAIR OBSCUR</h1>
+          <p class="banner-subtitle">O amanhã vem para todos.</p>
+        </div>
+      </section>
+
+      <section class="about-section reveal conteudo">
+        <div class="about-image">
+          <img
+            src="imagens/Expedition_33_group.webp"
+            alt="Cenário do jogo"
+            loading="lazy"
+            width="960"
+            height="600"
+            decoding="async"
+          />
+        </div>
+        <div class="about-text-1">
+          <div class="ornament">⬫ O Ciclo Continua ⬫</div>
+          <h3>EM SEU ÚLTIMO ANO DE VIDA</h3>
+          <p>
+            Decididos a parar de vez o GOMMAGE, o grupo reunido no porto parte
+            pela manhã para sua última expedição
+          </p>
+          <p>
+            A Expedição 33 navega em busca de destruir a Pintora e honrar
+            aqueles que não estão mais vivos
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section reverse reveal conteudo">
+        <div class="about-image">
+          <img
+            src="imagens/grupo.jpeg"
+            alt="Grupo de personagens"
+            loading="lazy"
+            width="960"
+            height="600"
+            decoding="async"
+          />
+        </div>
+        <div class="about-text-2">
+          <div class="ornament">⬫ O continente principal ⬫</div>
+          <h3>UM MUNDO FRAGMENTADO</h3>
+          <p>
+            Explore uma região fantasiosa de prados e florestas, repleta de
+            ruínas antigas e mistérios a serem descobertos
+          </p>
+          <p>
+            Siga o rastro das expedições anteriores e descubra seus destinos.
+            Cada local guarda segredos e histórias que revelam a profundidade do
+            mundo de Clair Obscur - Expedition 33
+          </p>
+        </div>
+      </section>
+
+      <section class="features-section-container reveal">
+        <div class="grid-section">
+          <div class="grid-title">
+            <h2>CARACTERÍSTICAS DO JOGO</h2>
+            <div class="ornament">✦ ✦ ✦</div>
+          </div>
+          <div class="features-grid">
+            <div class="grid-card">
+              <h4>Combate Reativo</h4>
+              <p>
+                Uma evolução dos JRPGs. Ações em tempo real aprimoram o combate
+                por turnos. Esquive, apare e contra-ataque para virar a batalha.
+              </p>
+            </div>
+
+            <div class="grid-card">
+              <h4>Narrativa Profunda</h4>
+              <p>
+                Uma história emocionante sobre o valor da vida e o peso do
+                sacrifício. Descubra o que realmente significa salvar o mundo.
+              </p>
+            </div>
+
+            <div class="grid-card">
+              <h4>Diferentes Builds</h4>
+              <p>
+                Aprimore a equipe do seu jeito. Melhore atributos, desbloqueie
+                habilidades e equipamentos com efeitos únicos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <canvas id="particles-bg"></canvas>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/animacoes.js" defer></script>
+    <script src="js/entry.js" defer></script>
+    <script src="js/petals.js" defer></script>
+  </body>
+</html>

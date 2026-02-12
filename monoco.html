@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Conheça Monoco, o protetor inabalável de Expedition 33. Descubra sua biografia, personalidade, habilidades e galeria de arte."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monoco - Personagem de Expedition 33</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="main-nav">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">EXPEDITION 33</a>
+
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+
+          <ul class="nav-menu">
+            <li><a href="index.html">História</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="personagens.html">Personagens</a></li>
+            <li>
+              <a href="https://www.expedition33.com" class="nav-cta">Out Now</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main char-detail-page">
+      <section class="char-header reveal">
+        <div class="char-header-image-container">
+          <img
+            src="imagens/monoco.avif"
+            alt="Arte principal de Monoco"
+            class="char-header-image"
+          />
+        </div>
+        <div class="char-header-text">
+          <h1 class="char-name">Monoco</h1>
+          <p class="char-subtitle">O Gestral Erudito</p>
+        </div>
+      </section>
+
+      <section class="quote-block reveal">
+        <blockquote>"Nossa, que pés adoráveis."</blockquote>
+      </section>
+
+      <div class="char-content-grid">
+        <section class="char-section reveal">
+          <h2>Biografia</h2>
+          <p>
+            Monoco é um Gestral, um grupo de seres amigáveis que apreciam a
+            emoção da batalha e veem a competição como uma forma de meditação.
+            Como um dos poucos Gestrals que falam a língua humana, Monoco adotou
+            uma postura erudita que esconde um espírito sanguinário.
+            <br /><br />
+            Embora os Gestrals não sejam afetados pela Pintora, a perspectiva do
+            combate atrai Monoco a se juntar à Expedição.
+          </p>
+        </section>
+
+        <section class="char-section reveal">
+          <h2>Atributos Iniciais</h2>
+          <ul>
+            <li><strong>Vida:</strong> 509</li>
+            <li><strong>Ataque:</strong> 491</li>
+            <li><strong>Velocidade:</strong> 304</li>
+            <li><strong>Defesa:</strong> 0</li>
+            <li><strong>Taxa Crítica:</strong> 5%</li>
+          </ul>
+        </section>
+
+        <section class="char-section reveal">
+          <h2>Habilidades e Gameplay</h2>
+          <p>
+            Monoco é um Gestral único que tem a habilidade de se transformar em
+            um Nevron e usar suas habilidades. Para Monoco aprender suas
+            Habilidades, ele deve estar no grupo ativo e derrotar inimigos que
+            possuem um ícone único de pé ao lado da barra de vida. Ao derrotar o
+            inimigo, Monoco adquire o pé do referido inimigo e desbloqueia uma
+            nova habilidade para seu arsenal.
+          </p>
+          <p>
+            <strong>Roda Bestial:</strong> As habilidades de Monoco movem o
+            ponteiro da Roda Bestial para frente. A roda possui várias máscaras:
+            Ágil, Conjuradora, Equilibrada, Pesada e Todo-Poderosa.
+          </p>
+          <p>
+            Cada Habilidade está ligada a uma Máscara específica. Usar uma
+            habilidade quando o ponteiro está na máscara correspondente (ou na
+            Máscara Todo-Poderosa) maximiza seus efeitos. Por exemplo,
+            <strong>Socos de Estalactite</strong> (Máscara Pesada) causa mais
+            dano se usada quando a roda aponta para a Máscara Pesada.
+          </p>
+        </section>
+      </div>
+
+      <div class="back-button-container">
+        <a href="personagens.html" class="back-button"
+          >« Voltar para Personagens</a
+        >
+      </div>
+    </main>
+
+    <canvas id="particles-bg"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/animacoes.js" defer></script>
+    <script src="js/entry.js" defer></script>
+    <script src="js/petals.js" defer></script>
+  </body>
+</html>

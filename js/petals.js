@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("particles-bg");
   if (!canvas) {
     console.error('Canvas element with id "particles-bg" not found.');
@@ -9,8 +9,20 @@ document.addEventListener("DOMContentLoaded", () => {
   canvas.style.position = "fixed";
   canvas.style.top = "0";
   canvas.style.left = "0";
-  canvas.style.zIndex = "100";
+  canvas.style.zIndex = "1";
   canvas.style.pointerEvents = "none";
+
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  const forceEnableMobilePetals = document.body.dataset.petalsMobile === "on";
+  const disablePetals = document.body.dataset.petals === "off";
+
+  if (disablePetals || prefersReducedMotion || (isMobile && !forceEnableMobilePetals)) {
+    canvas.style.display = "none";
+    return;
+  }
 
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
@@ -52,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateWind();
 
   const petals = [];
-  const numPetals = 100;
+  const numPetals = isMobile ? 36 : 100;
 
   class Petal {
     constructor() {
@@ -180,3 +192,4 @@ document.addEventListener("DOMContentLoaded", () => {
     animate();
   }
 });
+

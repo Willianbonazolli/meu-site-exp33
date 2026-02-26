@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+﻿document.addEventListener("DOMContentLoaded", () => {
   const entryScreen = document.getElementById("entry-screen");
   const enterButton = document.getElementById("enter-button");
   const body = document.body;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!audioToggle) {
     const div = document.createElement("div");
     div.className = "audio-control";
-    div.innerHTML = `<button id="audio-toggle" class="audio-toggle"><span class="audio-icon">🔊</span> Som</button>`;
+    div.innerHTML = `<button id="audio-toggle" class="audio-toggle"><span class="audio-icon">\uD83D\uDD0A</span> Som</button>`;
     document.body.appendChild(div);
     audioToggle = document.getElementById("audio-toggle");
   }
@@ -40,15 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            if (audioIcon) audioIcon.textContent = "🔊";
+            if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
             if (audioToggle) audioToggle.classList.remove("muted");
           })
           .catch((error) => {
             console.log(
-              "Reprodução automática bloqueada. O usuário precisará interagir.",
+              "Reproducao automatica bloqueada. O usuario precisara interagir.",
               error,
             );
-            if (audioIcon) audioIcon.textContent = "🔇";
+            if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
             if (audioToggle) audioToggle.classList.add("muted");
 
             const playOnInteraction = () => {
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 bgMusic
                   .play()
                   .then(() => {
-                    if (audioIcon) audioIcon.textContent = "🔊";
+                    if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
                     if (audioToggle) audioToggle.classList.remove("muted");
                   })
-                  .catch((e) => console.log("Áudio ainda bloqueado:", e));
+                  .catch((e) => console.log("Audio ainda bloqueado:", e));
               }
               ["click", "touchstart", "keydown"].forEach((evt) =>
                 document.removeEventListener(evt, playOnInteraction),
@@ -102,11 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (bgMusic.paused) {
         bgMusic.volume = 0.4;
         bgMusic.play();
-        if (audioIcon) audioIcon.textContent = "🔊";
+        if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
         audioToggle.classList.remove("muted");
       } else {
         bgMusic.pause();
-        if (audioIcon) audioIcon.textContent = "🔇";
+        if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
         audioToggle.classList.add("muted");
       }
     });
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.toggleAudioState = () => {
       if (bgMusic && !bgMusic.paused) {
         bgMusic.pause();
-        if (audioIcon) audioIcon.textContent = "🔇";
+        if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
         audioToggle.classList.add("muted");
       }
     };
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isSpotifyFocused = false;
   let wasAudioPlayingBeforeSpotify = false;
 
-  setInterval(() => {
+  const spotifyFocusPoll = window.setInterval(() => {
     const spotifyIframe = document.querySelector(
       ".spotify-player-wrapper iframe",
     );
@@ -229,9 +229,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (wasAudioPlayingBeforeSpotify && bgMusic && bgMusic.paused) {
         bgMusic.volume = 0.4;
         bgMusic.play();
-        if (audioIcon) audioIcon.textContent = "🔊";
+        if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
         if (audioToggle) audioToggle.classList.remove("muted");
       }
     }
-  }, 500);
+  }, 1200);
 });
+

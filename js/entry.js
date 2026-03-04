@@ -17,7 +17,7 @@
   if (!audioToggle) {
     const div = document.createElement("div");
     div.className = "audio-control";
-    div.innerHTML = `<button id="audio-toggle" class="audio-toggle"><span class="audio-icon">\uD83D\uDD0A</span> Som</button>`;
+    div.innerHTML = `<button id="audio-toggle" class="audio-toggle" aria-label="Ativar ou desativar trilha sonora" aria-pressed="false"><span class="audio-icon">\uD83D\uDD0A</span> Som</button>`;
     document.body.appendChild(div);
     audioToggle = document.getElementById("audio-toggle");
   }
@@ -25,6 +25,39 @@
   const audioIcon = audioToggle
     ? audioToggle.querySelector(".audio-icon")
     : null;
+
+  const setAudioUiState = (isPlaying) => {
+    if (!audioToggle) return;
+    audioToggle.setAttribute("aria-pressed", isPlaying ? "true" : "false");
+    audioToggle.classList.toggle("muted", !isPlaying);
+    if (audioIcon) audioIcon.textContent = isPlaying ? "\uD83D\uDD0A" : "\uD83D\uDD07";
+  };
+
+  const syncAudioContextHint = () => {
+    if (!audioToggle) return;
+    const audioControl = audioToggle.closest(".audio-control");
+    if (!audioControl) return;
+
+    let hint = audioControl.querySelector(".audio-context");
+    if (!hint) {
+      hint = document.createElement("span");
+      hint.className = "audio-context";
+      hint.id = "audio-context-hint";
+      hint.textContent = "Trilha ambiente";
+      audioControl.insertBefore(hint, audioToggle);
+    }
+
+    const hasSoundtrackSection = Boolean(document.querySelector(".soundtrack-secao"));
+    const showHint = !hasSoundtrackSection;
+    hint.hidden = !showHint;
+    audioControl.classList.toggle("audio-control-highlight", showHint);
+
+    if (showHint) {
+      audioToggle.setAttribute("aria-describedby", hint.id);
+    } else {
+      audioToggle.removeAttribute("aria-describedby");
+    }
+  };
 
   let transitionEl = document.getElementById("page-transition-overlay");
   if (!transitionEl) {
@@ -40,16 +73,14 @@
       if (playPromise !== undefined) {
         playPromise
           .then(() => {
-            if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
-            if (audioToggle) audioToggle.classList.remove("muted");
+            setAudioUiState(true);
           })
           .catch((error) => {
             console.log(
               "Reproducao automatica bloqueada. O usuario precisara interagir.",
               error,
             );
-            if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
-            if (audioToggle) audioToggle.classList.add("muted");
+            setAudioUiState(false);
 
             const playOnInteraction = () => {
               if (bgMusic && bgMusic.paused) {
@@ -57,8 +88,7 @@
                 bgMusic
                   .play()
                   .then(() => {
-                    if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
-                    if (audioToggle) audioToggle.classList.remove("muted");
+                    setAudioUiState(true);
                   })
                   .catch((e) => console.log("Audio ainda bloqueado:", e));
               }
@@ -97,25 +127,24 @@
     tryToPlayMusic();
   }
 
+  syncAudioContextHint();
+
   if (audioToggle && bgMusic) {
     audioToggle.addEventListener("click", () => {
       if (bgMusic.paused) {
         bgMusic.volume = 0.4;
         bgMusic.play();
-        if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
-        audioToggle.classList.remove("muted");
+        setAudioUiState(true);
       } else {
         bgMusic.pause();
-        if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
-        audioToggle.classList.add("muted");
+        setAudioUiState(false);
       }
     });
 
     window.toggleAudioState = () => {
       if (bgMusic && !bgMusic.paused) {
         bgMusic.pause();
-        if (audioIcon) audioIcon.textContent = "\uD83D\uDD07";
-        audioToggle.classList.add("muted");
+        setAudioUiState(false);
       }
     };
   }
@@ -176,6 +205,7 @@
         }
 
         updateActiveMenu(url);
+        syncAudioContextHint();
         window.scrollTo(0, 0);
 
         const menuToggle = document.getElementById("menu-toggle");
@@ -229,8 +259,7 @@
       if (wasAudioPlayingBeforeSpotify && bgMusic && bgMusic.paused) {
         bgMusic.volume = 0.4;
         bgMusic.play();
-        if (audioIcon) audioIcon.textContent = "\uD83D\uDD0A";
-        if (audioToggle) audioToggle.classList.remove("muted");
+        setAudioUiState(true);
       }
     }
   }, 1200);

@@ -66,7 +66,7 @@
         <section class="char-section reveal">
           <h2>Biografia</h2>
           <p>
-            Maelle é a uma das protagonistas principais de Expedition 33 e irmã
+            Maelle é uma das protagonistas principais de Expedition 33 e irmã
             adotiva de Gustave. Embora seja mais solitária e tímida, ela está
             ansiosa para voar; sua razão para se juntar à 33ª Expedição aos 16
             anos é explorar o mundo fora de Lumière. Ela ficou órfã aos 3 anos e
@@ -175,13 +175,18 @@
 
     <audio id="bg-music" loop>
       <source
-        src="Clair Obscur Expedition 33 (Original Soundtrack) 04 - Lumière à L'Aube - Sandfall Interactive (youtube).mp3"
+        src="soundtrack.mp3"
         type="audio/mpeg"
       />
     </audio>
 
     <div class="audio-control">
-      <button id="audio-toggle" class="audio-toggle">
+      <button
+        id="audio-toggle"
+        class="audio-toggle"
+        aria-label="Ativar ou desativar trilha sonora"
+        aria-pressed="false"
+      >
         <span class="audio-icon">🔊</span> Som
       </button>
     </div>

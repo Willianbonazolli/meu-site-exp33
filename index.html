@@ -75,13 +75,7 @@
           <img loading="lazy" decoding="async"
             class="frame-principal"
             src="imagens/frame.avif"
-            alt="frame decorativo em volta da imagem principal."
-          />
-          <img loading="lazy" decoding="async" class="principal frame-top" src="imagens/Blob-min.avif" alt="" />
-          <img loading="lazy" decoding="async"
-            class="principal frame-bottom"
-            src="imagens/Blob-min.avif"
-            alt="frame decorativo inferior."
+            alt=""
           />
         </div>
       </section>
@@ -117,12 +111,6 @@
           alt="Grupo de aventureiros em um campo florido, observando uma paisagem fantástica."
         />
         <img loading="lazy" decoding="async" class="frame-principal-2" src="imagens/frame.avif" alt="" />
-        <img loading="lazy" decoding="async" class="principal frame-top-2" src="imagens/Blob-min.avif" alt="" />
-        <img loading="lazy" decoding="async"
-          class="principal frame-bottom"
-          src="imagens/Blob-min.avif"
-          alt=""
-        />
       </section>
 
       <section class="frase-efeito reveal">
@@ -134,13 +122,13 @@
         </div>
 
         <div>
-          <h4 class="fundo-h4">
-            « "Uma vez por ano, a Pintora acorda e pinta em seu monólitO...
+          <p class="fundo-h4">
+            « "Uma vez por ano, a Pintora acorda e pinta em seu monólito...
             <br />
             « "A cada nova pintura, mais vidas se desfazem em fumaça... <br />
             « "Amanhã ela acordará e pintará '33'. Então precisamos agir…
             <br />- A Expedição 33." »
-          </h4>
+          </p>
         </div>
       </section>
 
@@ -151,12 +139,6 @@
           alt="Dois personagens em meio a ruínas, com uma luz forte ao fundo."
         />
         <img loading="lazy" decoding="async" class="frame-principal-2" src="imagens/frame.avif" alt="" />
-        <img loading="lazy" decoding="async" class="principal frame-top-2" src="imagens/Blob-min.avif" alt="" />
-        <img loading="lazy" decoding="async"
-          class="principal frame-bottom"
-          src="imagens/Blob-min.avif"
-          alt=""
-        />
       </section>
 
       <section class="personagens-sec reveal">
@@ -211,6 +193,9 @@
           <div class="soundtrack-cabecalho">
             <img loading="lazy" decoding="async" class="fundo-soundtrack" src="imagens/ut.avif" alt="" />
             <h2 class="soundtrack-titulo">SOUNDTRACK</h2>
+            <p class="soundtrack-legenda">
+              Ative o som para ouvir a trilha ambiente enquanto navega.
+            </p>
           </div>
 
           <div class="soundtrack-conteudo">
@@ -259,22 +244,17 @@
           </h2>
         </div>
 
-        <div class="premios-linhas">
-          <div class="linha-premios">
-            <span class="premio">Melhor Jogo do Ano</span>
-            <span class="premio">Melhor Direção de Arte</span>
-            <span class="premio">Melhor Narrativa</span>
-            <span class="premio">Melhor Trilha Sonora</span>
-            <span class="premio">Melhor Design</span>
-          </div>
-
-          <div class="linha-premios">
-            <span class="premio">Melhor Performance</span>
-            <span class="premio">Inovação em Acessibilidade</span>
-            <span class="premio">Melhor Jogo Indie</span>
-            <span class="premio">Escolha dos Fãs</span>
-          </div>
-        </div>
+        <ul class="premios-linhas" aria-label="Lista de prêmios recebidos">
+          <li class="premio">Melhor Jogo do Ano</li>
+          <li class="premio">Melhor Direção de Arte</li>
+          <li class="premio">Melhor Narrativa</li>
+          <li class="premio">Melhor Trilha Sonora</li>
+          <li class="premio">Melhor Design</li>
+          <li class="premio">Melhor Performance</li>
+          <li class="premio">Inovação em Acessibilidade</li>
+          <li class="premio">Melhor Jogo Indie</li>
+          <li class="premio">Escolha dos Fãs</li>
+        </ul>
       </section>
     </main>
 
@@ -283,7 +263,12 @@
     </audio>
 
     <div class="audio-control">
-      <button id="audio-toggle" class="audio-toggle">
+      <button
+        id="audio-toggle"
+        class="audio-toggle"
+        aria-label="Ativar ou desativar trilha sonora"
+        aria-pressed="false"
+      >
         <span class="audio-icon">🔊</span> Som
       </button>
     </div>

@@ -10,7 +10,11 @@
     bgMusic = document.createElement("audio");
     bgMusic.id = "bg-music";
     bgMusic.loop = true;
-    bgMusic.innerHTML = `<source src="soundtrack.mp3" type="audio/mpeg" />`;
+    
+    // Ajuste dinâmico para encontrar o áudio na raiz
+    const isSubPage = window.location.pathname.includes("/pages/");
+    const audioPath = isSubPage ? "../soundtrack.mp3" : "soundtrack.mp3";
+    bgMusic.innerHTML = `<source src="${audioPath}" type="audio/mpeg" />`;
     document.body.appendChild(bgMusic);
   }
 
@@ -264,4 +268,3 @@
     }
   }, 1200);
 });
-

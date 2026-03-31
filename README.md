@@ -4,7 +4,7 @@
 Visão Geral <br><br>
 O Site foi desenvolvido como um projeto experimental com tema inspirado no Jogo Expedition 33, apresentando uma experiência narrativa imersiva sobre o jobo. A ideia era trabalhar as habilidades de construção de site, semântica, indentação e Design. Fiz 3 páginas diferente que seguem esse estilo: background estilizado com imagens, efeitos de loading e sobreposição, efeito canvas para geração de pétalas.
 
-<br><br>
+<br>
 
 Conceito <br><br>
 O projeto explora um tipo storytelling digital através de:

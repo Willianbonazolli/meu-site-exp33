@@ -16,6 +16,6 @@ Tecnologias Utilizadas<br><br>
 HTML5<br>
 CSS3<br>
 JavaScript <br>
-GSAP.JS <br>
+GSAP.js <br>
 
 Hospedado no Github Pages: https://willianbonazolli.github.io/meu-site-exp33/index.html.

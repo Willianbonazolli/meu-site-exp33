@@ -6,7 +6,7 @@ O Site foi desenvolvido como um projeto experimental com tema inspirado no Jogo 
 
 <br>
 
-Conceito <br><br>
+Conceito do projeto <br><br>
 O projeto explora um tipo storytelling digital através de:
 Narrativa visual com elementos de mistério e aventura,
 design e tipografia em uma jornada. Tentei aproximar um pouco do estilo do jogo também.
